@@ -1,0 +1,15 @@
+# 1. Automatically handle newline characters (crucial for cross-platform Python script execution)
+* text=auto
+
+# 2. Explicitly define Python scripts as text files and force the use of LF newlines (compliant with Linux/server standards)
+*.py text eol=lf
+
+# 3. Explicitly specify that the dataset archive is a binary file and perform no text conversion
+*.zip binary
+
+# 4. If you plan to use LFS to track these zip files later (currently, web uploads can be left unenabled, but it is recommended to keep this as a backup)
+# *.zip filter=lfs diff=lfs merge=lfs -text
+
+# 5. Ensure that README and other documents display correctly on all platforms
+*.md text
+*.txt text
